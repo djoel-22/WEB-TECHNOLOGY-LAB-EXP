@@ -1,0 +1,127 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background: #f9f9f9;
+    color: #333;
+}
+
+header {
+    background: #222;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+}
+
+header h1 {
+    font-size: 2rem;
+}
+
+header input {
+    padding: 0.5rem;
+    border-radius: 5px;
+    border: none;
+    font-size: 1rem;
+}
+
+.banner img {
+    width: 100%;
+    /* Set a fixed height for the banner or use max-height for flexibility */
+    height: 300px; /* Example fixed height for the banner */
+    object-fit: cover; /* Maintain aspect ratio and cover the area */
+    display: block;
+}
+
+.welcome {
+    text-align: center;
+    padding: 2rem;
+    background: #fff;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    padding: 2rem;
+    background: #eef;
+}
+
+.product {
+    flex: 1 1 30%;
+    min-width: 250px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.thumb {
+    /* For background images within .thumb, use background-size: cover */
+    background-size: cover;
+    background-position: center;
+    height: 200px; /*  The height of the thumbnail container */
+    position: relative;
+    opacity: 0.9;
+    transition: 0.3s ease-in-out;
+}
+
+.thumb:hover {
+    opacity: 1;
+}
+
+.caption {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    background: rgba(0,0,0,0.6);
+    color: #fff;
+    text-align: center;
+    padding: 0.5rem;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2rem;
+    background: #fff;
+}
+
+.item {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    align-items: center;
+}
+
+.item:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.item img {
+    width: 300px; /* Set a specific width */
+    height: 200px; /* Set a specific height */
+    object-fit: cover; /* Ensures the image fills the area while preserving aspect ratio, may crop */
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+footer {
+    background: #222;
+    color: #ccc;
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.9rem;
+}
